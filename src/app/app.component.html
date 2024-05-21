@@ -1,0 +1,17 @@
+<!-- one way binding -->
+<p>One way binding:</p>
+<P [ngClass]="style">{{title}}</P> 
+
+<!-- Two way binding -->
+<p>Two way binding:</p>
+<input type="text" [(ngModel)]="word">
+<p>{{word}}</p>
+<div *ngIf="flag">
+    <app-child [name] = "title" (valueToParent)="getData($event)"></app-child>
+</div>
+<p>ngIf Directive</p>
+<button (click)="changeFlag()">Show NgIf</button>
+<p>ngFor Directive</p>
+<div *ngFor="let a of arr">
+    <p>{{a}}</p>
+</div>
